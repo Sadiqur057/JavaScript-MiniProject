@@ -15,7 +15,17 @@ class PasswordGenerator{
             <strong>Error!</strong> Please choose a valid input
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>`;
-        } 
+        }else if(difficulties==1){
+            let i =0;
+            while(i<len){
+                this.pass+=alphabets[Math.floor(Math.random()*len)];
+                this.pass+=numbers[Math.floor(Math.random()*len)];
+                i+=2;
+            }
+            let newPass = this.pass = this.pass.substring(0,len);
+            document.getElementById("pass").value=newPass;
+        }
+        
         
     }
     
