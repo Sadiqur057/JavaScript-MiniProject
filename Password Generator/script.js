@@ -35,7 +35,19 @@ class PasswordGenerator{
             }
             let newPass = this.pass = this.pass.substring(0,len);
             document.getElementById("pass").value=newPass;
-        }  
+        }else if(difficulties==3){
+            let i =0;
+            while(i<len){
+                this.pass+=alphabets[Math.floor(Math.random()*len)];
+                this.pass+=alphabets[Math.floor(Math.random()*len)].toUpperCase();
+                this.pass+=numbers[Math.floor(Math.random()*len)];
+                this.pass+=specialChar[Math.floor(Math.random()*len)];
+                i+=3;
+            }
+            let newPass = this.pass = this.pass.substring(0,len);
+            document.getElementById("pass").value=newPass;
+            
+        }    
         
     }
     
@@ -44,5 +56,3 @@ let randPass = new PasswordGenerator();
 let randPass2 = new PasswordGenerator();
 let randPass3 = new PasswordGenerator();
 
-
-// console.log(randPass.generatePassword(7,3));
