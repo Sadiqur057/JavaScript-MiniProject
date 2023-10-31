@@ -17,13 +17,13 @@
     </nav>
     <div class="card text-center m-5">
       <div class="card-header">Random Password Generator</div>
-      <div class="card-body">
+      <div class="card-body my-3">
         <div class="row">
           <div class="col-12 d-flex justify-content-center align-items-center">
             <form class="row g-3">
               <div class="col-auto my-3">
                 <label for="inputPassword2" class="visually-hidden">Password</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password"/>
+                <input type="text" class="form-control" id="pass" placeholder="Password"/>
               </div>
               <div class="col-auto">
                 <button  class="btn btn-primary mb-3">Copy</button>
@@ -31,9 +31,10 @@
             </form>
           </div>
         </div>
-        <a href="#" class="btn btn-primary">Easy Password</a>
-        <a href="#" class="btn btn-primary">Medium Password</a>
-        <a href="#" class="btn btn-primary">Strong Password</a>
+        <button onclick="randPass.generatePassword(7,1)" class="btn btn-primary m-1">Easy Password</button>
+        <button onclick="randPass2.generatePassword(7,2)" class="btn btn-primary m-1">Medium Password</button>
+        <button onclick="randPass3.generatePassword(7,3)" class="btn btn-primary m-1">Strong Password</button>
+
       </div>
       <div class="card-footer text-body-secondary">2 days ago</div>
     </div>
