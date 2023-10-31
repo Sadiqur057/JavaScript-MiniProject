@@ -25,7 +25,17 @@ class PasswordGenerator{
             let newPass = this.pass = this.pass.substring(0,len);
             document.getElementById("pass").value=newPass;
         }
-        
+        else if(difficulties==2){
+            let i =0;
+            while(i<len){
+                this.pass+=alphabets[Math.floor(Math.random()*len)];
+                this.pass+=numbers[Math.floor(Math.random()*len)];
+                this.pass+=specialChar[Math.floor(Math.random()*len)];
+                i+=3;
+            }
+            let newPass = this.pass = this.pass.substring(0,len);
+            document.getElementById("pass").value=newPass;
+        }  
         
     }
     
