@@ -1,8 +1,5 @@
-// Create a js program that capable of generating a password which contains atleast one lowercase, one uppercase and one special characters. Create a password class to achieve the same
-
 class PasswordGenerator{
     constructor(){
-        console.log("welcome to password generator");
         this.pass = "";
     }
     generatePassword(len,difficulties){
@@ -46,13 +43,23 @@ class PasswordGenerator{
             }
             let newPass = this.pass = this.pass.substring(0,len);
             document.getElementById("pass").value=newPass;
-            
-        }    
-        
+        }       
     }
-    
+    copyPassword(){
+        const inputField = document.getElementById("pass");
+        inputField.select();
+        document.execCommand("copy");
+        // inputField.setSelectionRange(0, 0);
+        document.getElementById("alert").innerHTML=`<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Password copied to clipboard 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>`;
+    }
 }
 let randPass = new PasswordGenerator();
 let randPass2 = new PasswordGenerator();
 let randPass3 = new PasswordGenerator();
+let randPass4 = new PasswordGenerator();
+
+  
 
